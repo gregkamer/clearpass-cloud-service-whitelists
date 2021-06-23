@@ -39,6 +39,7 @@ login.microsoftonline.com
 netdestination cloud-login_microsoftonline
     name login.microsoftonline.com
     name *.aadcdn.microsoftonline-p.com
+    name *.aadcdn.msauth.net
 !
 ```
 
@@ -47,4 +48,6 @@ netdestination cloud-login_microsoftonline
  rule alias login.microsoftonline.com match tcp 443 443 permit
  rule alias *.aadcdn.microsoftonline-p.com match tcp 443 443 permit
  rule alias *.aadcdn.microsoftonline-p.com match tcp 80 80 permit
+ rule alias *.aadcdn.msauth.net tcp 80 80 permit
+ rule alias *.aadcdn.msauth.net tcp 443 443 permit
 ```
